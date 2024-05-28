@@ -79,6 +79,11 @@ const torus5 = new THREE.Mesh( geometry, material5 );
 torus5.position.x = 2;
 scene.add( torus5 );
 
+const material6 = new THREE.MeshToonMaterial( { color: 0xCA8BFF } );
+const torus6 = new THREE.Mesh( geometry, material6 );
+torus6.position.x = 3.1;
+scene.add( torus6 );
+
 camera.position.z = 5;
 
 function animate() {
@@ -90,6 +95,7 @@ function animate() {
     torus3.rotation.y += value;
     torus4.rotation.y += value;
     torus5.rotation.y += value;
+    torus6.rotation.y += value;
 
     renderer.render(scene, camera);
 }
